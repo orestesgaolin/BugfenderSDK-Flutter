@@ -31,7 +31,7 @@
         NSDictionary *arguments = call.arguments;
         NSString *title = arguments[@"title"];
         NSString *value = arguments[@"value"];
-        [Bugfender sendIssueWithTitle:title text:value];
+        [Bugfender sendIssueReturningUrlWithTitle:title text:value];
         result(nil);
     } else if ([@"log" isEqualToString:call.method]) {
         NSDictionary *arguments = call.arguments;
@@ -40,21 +40,21 @@
         BFLog2(BFLogLevelDefault, tag, log);
         result(nil);
     } else if ([@"logExtended" isEqualToString:call.method]) {
-        NSDictionary *arguments = call.arguments;
-        NSString *log = arguments[@"log"];
-        NSString *tag = arguments[@"tag"];
-        NSString *methodName = arguments[@"methodName"];
-        NSString *className = arguments[@"className"];
-        NSString *logLevel = arguments[@"logLevel"];
-        BFLogLevel *level;
-        if ([logLevel containsString:@"Warning"]){
-            level = BFLogLevelWarning;
-        }else if ([logLevel containsString:@"Error"]){
-            level = BFLogLevelError;
-        }else{
-            level = BFLogLevelDefault;
-        }
-        [Bugfender logWithLineNumber:0 method:methodName file:className level:level tag:tag message:log];
+        // NSDictionary *arguments = call.arguments;
+        // NSString *log = arguments[@"log"];
+        // NSString *tag = arguments[@"tag"];
+        // NSString *methodName = arguments[@"methodName"];
+        // NSString *className = arguments[@"className"];
+        // NSString *logLevel = arguments[@"logLevel"];
+        // BFLogLevel *level;
+        // if ([logLevel containsString:@"Warning"]){
+        //     level = BFLogLevelWarning;
+        // }else if ([logLevel containsString:@"Error"]){
+        //     level = BFLogLevelError;
+        // }else{
+        //     level = BFLogLevelDefault;
+        // }
+        // [Bugfender logWithLineNumber:0 method:methodName file:className level:level tag:tag message:log];
         result(nil);
     } else if ([@"warn" isEqualToString:call.method]) {
         NSDictionary *arguments = call.arguments;
