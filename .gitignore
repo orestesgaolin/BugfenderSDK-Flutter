@@ -13,3 +13,4 @@ example/ios/Pods/
 **/.flutter-plugins-dependencies
 **/.settings/
 .dart_tool/
+example/ios/Flutter/
