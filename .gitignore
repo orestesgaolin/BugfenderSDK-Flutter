@@ -9,3 +9,6 @@ packages
 pubspec.lock
 fvm
 example/ios/Pods/
+.dart_tool/package_config.json
+**/.flutter-plugins-dependencies
+**/.settings/
