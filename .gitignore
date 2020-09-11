@@ -12,3 +12,4 @@ example/ios/Pods/
 .dart_tool/package_config.json
 **/.flutter-plugins-dependencies
 **/.settings/
+.dart_tool/
