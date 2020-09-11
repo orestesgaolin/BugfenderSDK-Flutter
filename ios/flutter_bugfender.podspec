@@ -3,7 +3,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_bugfender'
-  s.version          = '1.2.0'
+  s.version          = '1.3.1'
   s.summary          = 'BugfenderSDK plugin for Flutter'
   s.description      = <<-DESC
 Flutter plugin to enable Bugfender reporting.
@@ -15,8 +15,7 @@ Flutter plugin to enable Bugfender reporting.
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
-  s.dependency 'BugfenderSDK', '~> 1.9'
-  
-  s.ios.deployment_target = '8.0'
+  s.dependency 'BugfenderSDK', '~> 1.9.2'
+  s.ios.deployment_target = '10.0'
 end
 
